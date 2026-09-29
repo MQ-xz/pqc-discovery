@@ -35,7 +35,7 @@ PQC_PYTHON=python3.12 PQC_VENV_DIR=/opt/pqc-discovery/venv bash install.sh
 Install the tagged release directly from GitHub using pipx:
 
 ```bash
-pipx install 'git+https://github.com/MQ-xz/pqc-discovery.git@v0.2.0'
+pipx install 'git+https://github.com/MQ-xz/pqc-discovery.git@v0.2.1'
 ```
 
 For an existing virtual environment, use `python -m pip install` with the same
@@ -146,7 +146,7 @@ python -m build
 ```
 
 The resulting wheel and source archive are in `dist/`. A wheel can be installed
-with `python -m pip install dist/pqc_discovery-0.2.0-py3-none-any.whl`; pip also
+with `python -m pip install dist/pqc_discovery-0.2.1-py3-none-any.whl`; pip also
 needs access to the declared Python dependencies or a prepared local wheelhouse.
 
 ## Interpretation limits
@@ -156,3 +156,7 @@ organization-wide readiness. Repository matches are heuristic references, not
 proof of runtime use. DNSSEC inventory does not validate a chain of trust. SSH
 inventory does not authenticate. Evidence hashes detect corruption, not
 authenticity, and missing observations do not establish remediation.
+
+## License
+
+[MIT](LICENSE), copyright 2026 Mahshooq Zubair.
