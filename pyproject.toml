@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pqc-discovery"
+dynamic = ["version"]
+description = "Independent PQC evidence collection, inventory, and offline classification"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "cryptography==50.0.1",
+    "dnspython==2.8.0",
+]
+
+[project.scripts]
+pqc-discovery = "pqc_discovery.cli:entrypoint"
+rdp-tls-bridge = "pqc_discovery.rdp_bridge:main"
+
+[project.urls]
+Repository = "https://github.com/MQ-xz/pqc-discovery"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.dynamic]
+version = {attr = "pqc_discovery.__version__"}
